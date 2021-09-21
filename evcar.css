@@ -5,16 +5,19 @@
     margin: 0;
     padding: 0;
    }
- 
+ .row{
+   height:500px;
+ }
   .column {
     float: left;
     width: 50%;
     padding: 10px;
-    height: 320px; 
+    height: 580px; 
+    font-size: 30px;
     
-        background-image: url('images/3.png');
+        background-image: url('images/4.png');
         background-repeat: no-repeat;
-        background-size: 670px,200px;
+        background-size: 770px,400px;
         background-position:center;
     
         
@@ -24,11 +27,12 @@
     float: left;
     width: 50%;
     padding: 10px;
-    height: 320px; 
+    height: 580px; 
+    font-size: 30px;
     
         background-image: url('images/2.png');
         background-repeat: no-repeat;
-        background-size: 670px,200px;
+        background-size: 770px,400px;
         background-position:center;
     
 
@@ -49,12 +53,12 @@
 
   
    .main {
-    max-height: 550px;;
+    max-height: 250px;;
     background-color: #014d4e;
     color: white;
     font-size: 38pt;
     text-align: center;
-    line-height: 550px;
+    line-height: 250px;
    }
    footer{
     position: fixed;
