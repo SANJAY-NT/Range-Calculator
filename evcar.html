@@ -1,0 +1,164 @@
+<<!DOCTYPE html>
+<html lang="en">
+    <head>
+          <link rel="stylesheet" href="evcar.css">
+
+          <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="keywords" content="footer, address, phone, icons" />
+ 
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="row">
+      <div class="column" style="background-color:#01889f;">
+        <h2>EV Range Calculator</h2>
+        <form>
+            <label for="no.ofpassangers">No.of Passangers:</label>
+            <input type="number" id="no.ofpassangers" min="1" max="5" name="no.ofpassangers"><br><br>
+            <label for="batterycapacity">Battery Capacity in KWh:</label>
+            <input type="range" min="30" max="100" value="50" class="bc" id="myRange1"><span id="bc"></span><br><br>
+
+            <script>
+                var bc = document.getElementById("myRange1");
+                var output3 = document.getElementById("bc");
+                output3.innerHTML = bc.value;
+                bc.oninput = function() {
+                output3.innerHTML = this.value;
+                }
+            </script>  
+            <label for="chargeleft">Charge left:</label>
+            <input type="range" min="20" max="100" value="50" class="cl" id="myRange2"><span id="cl"></span><br><br>
+
+            <script>
+                var cl = document.getElementById("myRange2");
+                var output1 = document.getElementById("cl");
+                output1.innerHTML = cl.value;
+                cl.oninput = function() {
+                output1.innerHTML = this.value;
+                }
+            </script>   
+            <label for="speed">Speed:</label>
+            <input type="range" min="20" max="150" value="50" class="speed" id="myRange3"><span id="speed"></span><br><br>
+
+            <script>
+                var speed = document.getElementById("myRange3");
+                var output2 = document.getElementById("speed");
+                output2.innerHTML = speed.value;
+                speed.oninput = function() {
+                output2.innerHTML = this.value;
+                }
+            </script> 
+            <input type="button" value="Calculate" id="cal" onClick="getElementById('output').innerHTML=myFunction()">
+            <br> Range= <p id="output"></p>
+            <script>
+                
+                function init() {
+                    document.getElementById("output").innerHTML = "";
+                }
+                window.onload = init;
+                var cal = document.getElementById("cal").addEventListener("click", myFunction);
+                function myFunction(){
+                    var PassengerNos= Number(document.getElementById("no.ofpassangers").value);
+                    var Speed= Number(document.getElementById("myRange3").value);
+                    var charge = Number(document.getElementById("myRange2").value);
+                    var BatteryCapacity = Number(document.getElementById("myRange1").value);
+                    var output = document.getElementById("output");
+                    const MotorEfficiency = 0.85;
+                    const vehicleweight = 1500;
+                    let Velocity = Speed*1000/3600 ;
+                    let L = 4.18;
+                    let B = 1.8;
+                    const AirDensity = 1.204; 
+                    const GravityAccln = 9.8;
+                    const RollingResistance = 0.02;
+                    const CoeffDrag=0.29 ;
+                    let Area = L*B;
+                    const PevKerts=1 ;
+                    let Total= BatteryCapacity*1000;
+                    let Weight = vehicleweight+PassengerNos*65;
+                    let power = (Weight*GravityAccln*Velocity*RollingResistance)+((AirDensity*CoeffDrag*Area*Velocity*Velocity*Velocity)*.5);
+                    let WHPerKm = power/Speed;
+                    let WattHr=Total*charge*PevKerts/100;
+                    let Range=WattHr/WHPerKm ;
+                   return Range;    
+                }
+                document.getElementById("output").innerHTML=myFunction();
+                </script>
+          </form>
+           
+        </div>
+      <div class="column1" style="background-color:#54abb3;">
+        <h2>Know more</h2>
+       
+      </div> 
+    </div>
+    
+
+
+
+
+
+     
+ <div class="main"></div>
+ <footer class="footer-distributed">
+ 
+ <div class="footer-left">
+ 
+
+ 
+
+ <p class="footer-company-about">
+
+    <span>About the college</span>
+    JSS Academy of Technical Education.<br>Bangalore<br>India-50061.
+    </p>
+ 
+ <div class="footer-icons">
+ 
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-github"></i></a>
+</div>
+ </div>
+ 
+ <div class="footer-center">
+ <div>
+ <i class="fa fa-user"></i>
+ <p>Govardan K C<br> Saksha Prakash K<br>Sanjay N T <br> Satish <br>Settar Pramod</p>
+ </div>
+ 
+
+ <div>
+ <i class="fa fa-envelope"></i>
+ <p></p>
+ </div>
+ 
+ </div>
+ 
+ <div class="footer-right">
+
+ <p class="footer-company-about">
+ <span>About the company</span>
+ about companyyyy.
+ </p>
+ 
+ <div class="footer-icons">
+ 
+ <a href="#"><i class="fa fa-facebook"></i></a>
+ <a href="#"><i class="fa fa-twitter"></i></a>
+ <a href="#"><i class="fa fa-linkedin"></i></a>
+ <a href="#"><i class="fa fa-github"></i></a>
+ 
+ </div>
+ 
+ </div>
+ 
+ </footer>
+ 
+
+</body>
+</html>
