@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
           <link rel="stylesheet" href="evcar.css">
@@ -13,13 +13,13 @@
 </head>
 <body>
     <div class="row">
-      <div class="column" style="background-color:#01889f;">
+      <div class="column" style="background-color:#ffffff;">
         <h2>EV Range Calculator</h2>
         <form>
             <label for="no.ofpassangers">No.of Passangers:</label>
             <input type="number" id="no.ofpassangers" min="1" max="5" name="no.ofpassangers"><br><br>
-            <label for="batterycapacity">Battery Capacity in KWh:</label>
-            <input type="range" min="30" max="100" value="50" class="bc" id="myRange1"><span id="bc"></span><br><br>
+            <label for="batterycapacity">Battery Capacity:</label>
+            <input type="range" min="30" max="100" value="50" class="bc" id="myRange1"><span id="bc"></span>KWh<br><br>
 
             <script>
                 var bc = document.getElementById("myRange1");
@@ -29,8 +29,8 @@
                 output3.innerHTML = this.value;
                 }
             </script>  
-            <label for="chargeleft">Charge left:</label>
-            <input type="range" min="20" max="100" value="50" class="cl" id="myRange2"><span id="cl"></span><br><br>
+            <label for="chargeleft">Charge left:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="range" min="20" max="100" value="50" class="cl" id="myRange2"><span id="cl"></span>&#37;<br><br>
 
             <script>
                 var cl = document.getElementById("myRange2");
@@ -40,8 +40,8 @@
                 output1.innerHTML = this.value;
                 }
             </script>   
-            <label for="speed">Speed:</label>
-            <input type="range" min="20" max="150" value="50" class="speed" id="myRange3"><span id="speed"></span><br><br>
+            <label for="speed">Speed:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <input type="range" min="20" max="150" value="50" class="speed" id="myRange3"><span id="speed"></span>Km/hr<br><br>
 
             <script>
                 var speed = document.getElementById("myRange3");
@@ -52,7 +52,7 @@
                 }
             </script> 
             <input type="button" value="Calculate" id="cal" onClick="getElementById('output').innerHTML=myFunction()">
-            <br> Range= <p id="output"></p>
+            <br> Range in km = <p id="output"></p>
             <script>
                 
                 function init() {
@@ -92,6 +92,7 @@
         </div>
       <div class="column1" style="background-color:#54abb3;">
         <h2>Know more</h2>
+        For more details please click on <a href="images/Range Estimator Documentation.pdf">Range Estimator Documentation</a>
        
       </div> 
     </div>
@@ -103,12 +104,9 @@
 
      
  <div class="main"></div>
- <footer class="footer-distributed">
+ <div class="footer-distributed"></footer>
  
  <div class="footer-left">
- 
-
- 
 
  <p class="footer-company-about">
 
@@ -126,24 +124,14 @@
  </div>
  
  <div class="footer-center">
- <div>
- <i class="fa fa-user"></i>
- <p>Govardan K C<br> Saksha Prakash K<br>Sanjay N T <br> Satish <br>Settar Pramod</p>
- </div>
- 
 
- <div>
- <i class="fa fa-envelope"></i>
- <p></p>
- </div>
- 
  </div>
  
  <div class="footer-right">
 
  <p class="footer-company-about">
  <span>About the company</span>
- about companyyyy.
+ Wynncom Digital Device Pvt Ltd,<br> Gurgaon.
  </p>
  
  <div class="footer-icons">
@@ -157,7 +145,7 @@
  
  </div>
  
- </footer>
+</div>
  
 
 </body>
