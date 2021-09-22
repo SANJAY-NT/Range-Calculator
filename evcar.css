@@ -23,6 +23,9 @@
         
      
   }
+ input{
+   width:200px;
+ }
   .column1{
     float: left;
     width: 50%;
@@ -30,9 +33,9 @@
     height: 580px; 
     font-size: 30px;
     
-        background-image: url('images/2.png');
+        background-image: url('images/5.png');
         background-repeat: no-repeat;
-        background-size: 770px,400px;
+        background-size: 770px,300px;
         background-position:center;
     
 
