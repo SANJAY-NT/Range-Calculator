@@ -13,8 +13,8 @@
 </head>
 <body>
     <div class="row">
-      <div class="column" style="background-color:#ffffff;">
-        <h2>EV Range Calculator</h2>
+      <div class="column" style="background-color:#f4f5ff;">
+       <h2>EV Range Calculator&nbsp;&nbsp;<a href="images/Range Estimator Documentation.pdf"><div class="tooltip"><i class="fa fa-info-circle" ></i><span class="tooltiptext">Range Estimator Documentation</span></div></a></h2>
         <form>
             <label for="no.ofpassangers">No.of Passangers:</label>
             <input type="number" id="no.ofpassangers" min="1" max="5" name="no.ofpassangers"><br><br>
@@ -52,7 +52,7 @@
                 }
             </script> 
             <input type="button" value="Calculate" id="cal" onClick="getElementById('output').innerHTML=myFunction()">
-            <br> Range in km = <p id="output"></p>
+            <br> <p id="output"></p>
             <script>
                 
                 function init() {
@@ -83,20 +83,18 @@
                     let WHPerKm = power/Speed;
                     let WattHr=Total*charge*PevKerts/100;
                     let Range=WattHr/WHPerKm ;
-                   return Range;    
+                   return  "Range = " + (Math.round(Range)) +" km";    
                 }
                 document.getElementById("output").innerHTML=myFunction();
                 </script>
           </form>
            
         </div>
-      <div class="column1" style="background-color:#ffffff;">
-        <h2>Know more</h2>
-        For more details please click on <a href="images/Range Estimator Documentation.pdf">Range Estimator Documentation</a>
-       
+      <div class="column1" style="background-color:#f4f5ff;">
+        
+       <img src="images/8.png">
       </div> 
     </div>
-    
 
 
 
@@ -116,10 +114,10 @@
  
  <div class="footer-icons">
  
-    <a href="#"><i class="fas fa-facebook"></i></a>
-    <a href="#"><i class="fas fa-twitter"></i></a>
-    <a href="#"><i class="fas fa-linkedin"></i></a>
-    <a href="#"><i class="fas fa-github"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <a href="#"><i class="fa fa-github"></i></a>
 </div>
  </div>
  
@@ -136,10 +134,10 @@
  
  <div class="footer-icons">
  
- <a href="#"><i class="fas fa-facebook"></i></a>
- <a href="#"><i class="fas fa-twitter"></i></a>
- <a href="#"><i class="fas fa-linkedin"></i></a>
- <a href="#"><i class="fas fa-github"></i></a>
+ <a href="#"><i class="fa fa-facebook"></i></a>
+ <a href="#"><i class="fa fa-twitter"></i></a>
+ <a href="#"><i class="fa fa-linkedin"></i></a>
+ <a href="#"><i class="fa fa-github"></i></a>
  
  </div>
  
